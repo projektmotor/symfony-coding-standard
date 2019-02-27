@@ -1,16 +1,17 @@
-# symfony-coding-standard
+# Symfony coding standard of ProjektMOTOR
 Symfony coding standards for ProjektMOTOR enriched by several useful rules.
 
-We at ProjektMOTOR love clean code. So we have a have an internal PHP coding standard based on
+We at ProjektMOTOR :heart: clean code. So we have a have an internal PHP coding standard based on
 symfony coding standard 
 used for all our projects. We are using [PHP CodeSniffer][1] with the great [Symfony PHP CodeSniffer Coding Standard
  of djoos][2] and some sniffs of [Slevomat Coding Standard][3], both adopted to our own needs.
 
 ## Goals of our coding standard
 
-* Using already existing standards (PSR-1, PSR-2)
-* Coding standard across different projects
-* Avoid duplications (also between code, CVS history and documentation)
+* Using already existing standards (PSR-1, PSR-2, Symfony).
+* Coding standard can be used across different projects.
+* Avoid duplications (also between code, CVS history and documentation).
+* Ensure code quality across different dev setups (e.g. different IDEs).
 
 ## Installation
 
@@ -18,7 +19,7 @@ If you use [Composer][4], you can install ProjektMOTOR Coding Standard in your p
 command:
 
 ```BASH
-composer require --dev projektmotor/coding-standard
+composer require --dev projektmotor/symfony-coding-standard
 ```
 
 ## Usage
