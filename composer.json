@@ -1,0 +1,30 @@
+{
+    "name": "projektmotor/symfony-coding-standard",
+    "type": "phpcodesniffer-standard",
+    "description": "Internal PHP coding standard of ProjektMOTOR",
+    "keywords": ["coding standard", "phpcs", "psr", "code sniffer", "symfony"],
+    "homepage": "https://www.projektmotor.de",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robert Freigang",
+            "email": "robert.freigang@projektmotor.de"
+        },
+        {
+            "name": "ProjektMOTOR GmbH",
+            "homepage": "https://www.projektmotor.de"
+        }
+    ],
+    "require": {
+        "escapestudios/symfony2-coding-standard": "^3.5",
+        "slevomat/coding-standard": "^5.0",
+        "squizlabs/php_codesniffer": "^3.0"
+    },
+    "support" : {
+        "source": "https://github.com/projektmotor/symfony-coding-standard",
+        "issues": "https://github.com/projektmotor/symfony-coding-standard/issues"
+    },
+    "conflict": {
+        "squizlabs/php_codesniffer": "<3 || >=4"
+    }
+}
