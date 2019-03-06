@@ -70,14 +70,11 @@
 
     <rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName">
         <properties>
-            <property
-                    name="rootNamespaces"
-                    type="array"
-                    value="
-                    tests=>App\Tests,
-                    src=>App,
-                "
-            />
+            <property name="rootNamespaces" type="array">
+                <element key="src" value="App"/>
+                <element key="tests" value="App\Tests"/>
+                <element key="tests/features/bootstrap" value="App\Tests\Behat"/>
+            </property>
             <property name="ignoredNamespaces" type="array" value="DoctrineMigrations"/>
         </properties>
     </rule>
@@ -134,6 +131,7 @@
     <exclude-pattern>./public/index.php</exclude-pattern>
     <exclude-pattern>./config/bundles.php</exclude-pattern>
     <exclude-pattern>./config/bootstrap.php</exclude-pattern>
+    <exclude-pattern>./tests/features/bootstrap/bootstrap.php</exclude-pattern>
 
     <file>bin/</file>
     <file>config/</file>
