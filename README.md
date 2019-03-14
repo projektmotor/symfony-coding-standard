@@ -22,6 +22,22 @@ command:
 composer require --dev projektmotor/symfony-coding-standard
 ```
 
+Optional: To install coding standard automatically edit your composer script:
+
+```JSON
+    scripts: {
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ],
+        "auto-scripts": {
+            "phpcs --config-set installed_paths vendor/projektmotor/symfony-coding-standard/ProjektMOTORCodingStandard/": "script",
+        }
+    }
+```
+
 ## Usage
 
 Just create a `phpcs.xml.dist` in your project's root directory with the following content:
