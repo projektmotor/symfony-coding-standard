@@ -23,6 +23,8 @@
         <!-- keep it for debugging reasons to be able to list all rules vendor/bin/phpcs -e | grep SlevomatCodingStandard -->
         <!--<exclude name="*" />-->
         <exclude name="SlevomatCodingStandard.Classes.DisallowLateStaticBindingForConstants.DisallowedLateStaticBindingForConstant" />
+        <exclude name="SlevomatCodingStandard.Classes.SuperfluousAbstractClassNaming.SuperfluousPrefix" />
+        <exclude name="SlevomatCodingStandard.Classes.SuperfluousTraitNaming" />
         <exclude name="SlevomatCodingStandard.Classes.TraitUseSpacing.IncorrectLinesCountAfterLastUse" />
         <exclude name="SlevomatCodingStandard.Classes.TraitUseSpacing.IncorrectLinesCountBeforeFirstUse" />
         <exclude name="SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment.OneLinePropertyComment" />
