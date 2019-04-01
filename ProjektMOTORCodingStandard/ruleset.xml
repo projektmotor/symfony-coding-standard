@@ -48,6 +48,7 @@
         <!-- $count++ is not allowed wtf -->
         <exclude name="SlevomatCodingStandard.Operators.DisallowIncrementAndDecrementOperators.DisallowedPostIncrementOperator"/>
         <exclude name="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax.DisallowedArrayTypeHintSyntax"/>
+        <exclude name="SlevomatCodingStandard.TypeHints.DisallowMixedTypeHint.DisallowedMixedTypeHint" />
         <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversableParameterTypeHintSpecification"/>
         <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversableReturnTypeHintSpecification"/>
         <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.UselessDocComment"/>
