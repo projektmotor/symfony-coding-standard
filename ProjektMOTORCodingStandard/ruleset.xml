@@ -29,8 +29,8 @@
         <exclude name="SlevomatCodingStandard.Classes.TraitUseSpacing.IncorrectLinesCountBeforeFirstUse" />
         <exclude name="SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment.OneLinePropertyComment" />
         <exclude name="SlevomatCodingStandard.Commenting.DocCommentSpacing.IncorrectLinesCountBetweenDifferentAnnotationsTypes" />
-        <exclude name="SlevomatCodingStandard.ControlStructures.ControlStructureSpacing.IncorrectLinesCountBeforeControlStructure" />
-        <exclude name="SlevomatCodingStandard.ControlStructures.ControlStructureSpacing.IncorrectLinesCountAfterControlStructure" />
+        <exclude name="SlevomatCodingStandard.Commenting.UselessFunctionDocCommentSniff" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing" />
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowEmpty.DisallowedEmpty" />
         <!-- cause they are allowed and wanted in symfony -->
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison.DisallowedYodaComparison" />
@@ -51,11 +51,11 @@
         <exclude name="SlevomatCodingStandard.Operators.DisallowIncrementAndDecrementOperators"/>
         <exclude name="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax.DisallowedArrayTypeHintSyntax"/>
         <exclude name="SlevomatCodingStandard.TypeHints.DisallowMixedTypeHint.DisallowedMixedTypeHint" />
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversableParameterTypeHintSpecification"/>
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversableReturnTypeHintSpecification"/>
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.UselessDocComment"/>
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.UselessParameterAnnotation"/>
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.UselessReturnAnnotation"/>
+
+        <!-- sniffs should not be excluded since annotation sniffs are moved to UselessFunctionDocCommentSniff -->
+<!--        <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHintSniff"/>-->
+<!--        <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHintSniff"/>-->
+<!--        <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHintSniff"/>-->
     </rule>
 
     <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses">
@@ -87,35 +87,6 @@
         <exclude-pattern>src/Kernel.php</exclude-pattern>
     </rule>
 
-    <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration">
-        <properties>
-            <property
-                    name="usefulAnnotations"
-                    type="array"
-                    value="
-                    @after,
-                    @before,
-                    @dataProvider,
-                    @deprecated,
-                    @required,
-                    @see,
-                    @ApiDoc,
-                    @Assert\,
-                    @QueryParam,
-                    @ORM\,
-                    @ParamConverter,
-                    @Route,
-                    @Template,
-                    @Security,
-                    @Method,
-                    @IsGranted,
-                    @Operation
-                "
-            />
-            <property name="enableEachParameterAndReturnInspection" value="true"/>
-        </properties>
-    </rule>
-
     <rule ref="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces">
         <properties>
             <property name="linesCountAfterOpeningBrace" value="0"/>
@@ -131,6 +102,7 @@
     </rule>
 
     <exclude-pattern>./src/Migrations/*</exclude-pattern>
+    <exclude-pattern>./src/Kernel.php</exclude-pattern>
     <exclude-pattern>./public/index.php</exclude-pattern>
     <exclude-pattern>./config/bundles.php</exclude-pattern>
     <exclude-pattern>./config/bootstrap.php</exclude-pattern>
