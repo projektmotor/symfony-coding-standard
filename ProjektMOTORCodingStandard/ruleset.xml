@@ -109,6 +109,10 @@
         <exclude-pattern>src/Kernel.php</exclude-pattern>
     </rule>
 
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint">
+        <exclude-pattern>src/**Validator.php</exclude-pattern>
+    </rule>
+
     <rule ref="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces">
         <properties>
             <property name="linesCountAfterOpeningBrace" value="0"/>
