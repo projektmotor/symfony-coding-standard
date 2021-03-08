@@ -22,6 +22,8 @@
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/ruleset.xml"><!-- relative path to your ruleset.xml -->
         <!-- keep it for debugging reasons to be able to list all rules vendor/bin/phpcs -e | grep SlevomatCodingStandard -->
         <!--<exclude name="*" />-->
+        <exclude name="SlevomatCodingStandard.Commenting.RequireOneLineDocComment.MultiLineDocComment" />
+        <exclude name="SlevomatCodingStandard.Numbers.RequireNumericLiteralSeparator.RequiredNumericLiteralSeparator" />
         <exclude name="SlevomatCodingStandard.Commenting.DisallowCommentAfterCode.DisallowedCommentAfterCode" />
         <exclude name="SlevomatCodingStandard.Functions.RequireMultiLineCall.RequiredMultiLineCall" />
         <exclude name="SlevomatCodingStandard.Files.LineLength.LineTooLong" />
@@ -71,6 +73,10 @@
         <properties>
             <property name="searchAnnotations" value="true"/>
         </properties>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.UselessAnnotation">
+        <exclude-pattern>tests/**Context*.php</exclude-pattern>
     </rule>
 
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
