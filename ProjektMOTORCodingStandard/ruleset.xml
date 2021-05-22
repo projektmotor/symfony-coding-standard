@@ -22,6 +22,18 @@
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/ruleset.xml"><!-- relative path to your ruleset.xml -->
         <!-- keep it for debugging reasons to be able to list all rules vendor/bin/phpcs -e | grep SlevomatCodingStandard -->
         <!--<exclude name="*" />-->
+
+        <exclude name="SlevomatCodingStandard.Files.FunctionLength.FunctionLength" />
+        <exclude name="SlevomatCodingStandard.Functions.FunctionLength.FunctionLength" />
+        <exclude name="SlevomatCodingStandard.Functions.RequireTrailingCommaInCall.MissingTrailingComma" />
+        <exclude name="SlevomatCodingStandard.Functions.DisallowTrailingCommaInCall.DisallowedTrailingComma" />
+        <exclude name="SlevomatCodingStandard.Functions.DisallowNamedArguments.DisallowedNamedArgument" />
+        <exclude name="SlevomatCodingStandard.Classes.RequireConstructorPropertyPromotion.RequiredConstructorPropertyPromotion" />
+        <exclude name="SlevomatCodingStandard.Functions.RequireTrailingCommaInDeclaration.MissingTrailingComma" />
+        <exclude name="SlevomatCodingStandard.Classes.ClassStructure.IncorrectGroupOrder" />
+        <exclude name="SlevomatCodingStandard.PHP.DisallowDirectMagicInvokeCall.DisallowDirectMagicInvokeCall" />
+        <exclude name="SlevomatCodingStandard.Functions.RequireArrowFunction.RequiredArrowFunction" />
+
         <exclude name="PSR1.Files.SideEffects.FoundWithSymbols" />
         <exclude name="SlevomatCodingStandard.Functions.DisallowEmptyFunction.EmptyFunction" />
         <exclude name="SlevomatCodingStandard.Whitespaces.DuplicateSpaces.DuplicateSpaces" />
@@ -37,6 +49,7 @@
         <exclude name="SlevomatCodingStandard.Files.LineLength.LineTooLong" />
         <exclude name="SlevomatCodingStandard.PHP.RequireExplicitAssertion.RequiredExplicitAssertion" />
         <exclude name="SlevomatCodingStandard.Namespaces.UseOnlyWhitelistedNamespaces.NonFullyQualified" />
+        <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming.SuperfluousSuffix" />
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousTraitNaming.SuperfluousSuffix" />
         <exclude name="SlevomatCodingStandard.Operators.DisallowIncrementAndDecrementOperators.DisallowedPostIncrementOperator" />
         <exclude name="SlevomatCodingStandard.ControlStructures.JumpStatementsSpacing.IncorrectLinesCountBeforeControlStructure" />
@@ -76,6 +89,33 @@
 <!--        <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHintSniff"/>-->
 <!--        <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHintSniff"/>-->
 <!--        <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHintSniff"/>-->
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingTraversableTypeHintSpecification">
+        <exclude-pattern>tests/**Test*.php</exclude-pattern>
+        <exclude-pattern>src/Form/Type/*Type.php</exclude-pattern>
+        <exclude-pattern>src/Doctrine/*Extension.php</exclude-pattern>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingNativeTypeHint">
+        <exclude-pattern>src/Controller/*Controller.php</exclude-pattern>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint">
+        <exclude-pattern>src/Security/UserProvider.php</exclude-pattern>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.Classes.ForbiddenPublicProperty.ForbiddenPublicProperty">
+        <exclude-pattern>src/Dto/*Request.php</exclude-pattern>
+        <exclude-pattern>src/Entity/*Request.php</exclude-pattern>
+        <exclude-pattern>src/Validator/Constraints/*.php</exclude-pattern>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingTraversableTypeHintSpecification">
+        <exclude-pattern>tests/**Test*.php</exclude-pattern>
+    </rule>
+    <rule ref="Symfony.Commenting.FunctionComment.MissingParamTag">
+        <exclude-pattern>tests/Context/*Context.php</exclude-pattern>
     </rule>
 
     <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses">
@@ -119,6 +159,12 @@
         <properties>
             <property name="linesCountAfterOpeningBrace" value="0"/>
             <property name="linesCountBeforeClosingBrace" value="0"/>
+        </properties>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+        <properties>
+            <property name="linesCountBeforeDeclare" value="0" />
         </properties>
     </rule>
 
