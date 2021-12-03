@@ -52,6 +52,8 @@
         <exclude name="SlevomatCodingStandard.Commenting.UselessFunctionDocComment" />
         <exclude name="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing" />
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowEmpty.DisallowedEmpty" />
+        <!-- Hello PHP 8 -->
+        <exclude name="SlevomatCodingStandard.ControlStructures.DisallowNullSafeObjectOperator.DisallowedNullSafeObjectOperator" />
         <!-- cause they are allowed and wanted in symfony -->
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison.DisallowedYodaComparison" />
         <!-- threw a false positive in ArticleImportCommand of HSM -->
