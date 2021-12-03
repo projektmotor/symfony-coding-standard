@@ -52,6 +52,7 @@
         <exclude name="SlevomatCodingStandard.Commenting.UselessFunctionDocComment" />
         <exclude name="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing" />
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowEmpty.DisallowedEmpty" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.DisallowShortTernaryOperator.DisallowedShortTernaryOperator" />
         <!-- Hello PHP 8 -->
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowNullSafeObjectOperator.DisallowedNullSafeObjectOperator" />
         <!-- cause they are allowed and wanted in symfony -->
@@ -84,6 +85,28 @@
         <properties>
             <property name="searchAnnotations" value="true"/>
         </properties>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint">
+        <exclude-pattern>src/DataTransformer/*.php</exclude-pattern>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingTraversableTypeHintSpecification">
+        <exclude-pattern>src/DataProvider/*.php</exclude-pattern>
+        <exclude-pattern>src/DataTransformer/*.php</exclude-pattern>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingAnyTypeHint">
+        <exclude-pattern>src/Controller/Admin/*Controller.php</exclude-pattern>
+        <exclude-pattern>src/Security/Voter/*Voter.php</exclude-pattern>
+        <exclude-pattern>src/DataTransformer/*.php</exclude-pattern>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingTraversableTypeHintSpecification">
+        <exclude-pattern>tests/Context/EmailTrait.php</exclude-pattern>
+        <exclude-pattern>src/DataProvider/*.php</exclude-pattern>
+        <exclude-pattern>src/DataTransformer/*.php</exclude-pattern>
+        <exclude-pattern>src/Controller/Admin/*.php</exclude-pattern>
     </rule>
 
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.UselessAnnotation">
