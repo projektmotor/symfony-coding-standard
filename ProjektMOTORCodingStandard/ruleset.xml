@@ -210,6 +210,7 @@
     <exclude-pattern>./config/bundles.php</exclude-pattern>
     <exclude-pattern>./config/bootstrap.php</exclude-pattern>
     <exclude-pattern>./tests/features/bootstrap/bootstrap.php</exclude-pattern>
+    <exclude-pattern>./tests/object-manager.php</exclude-pattern>
 
     <file>bin/</file>
     <file>config/</file>
