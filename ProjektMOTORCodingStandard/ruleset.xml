@@ -23,6 +23,16 @@
         <!-- keep it for debugging reasons to be able to list all rules vendor/bin/phpcs -e | grep SlevomatCodingStandard -->
         <!--<exclude name="*" />-->
 
+        <exclude name="SlevomatCodingStandard.Complexity.Cognitive.ComplexityTooHigh" />
+        <exclude name="SlevomatCodingStandard.Files.FileLength.FileTooLong" />
+        <exclude name="SlevomatCodingStandard.Classes.ClassLength.ClassTooLong" />
+        <exclude name="SlevomatCodingStandard.Arrays.AlphabeticallySortedByKeys.IncorrectKeyOrder" />
+        <exclude name="SlevomatCodingStandard.Attributes.AttributesOrder" />
+        <exclude name="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.ReferenceViaFullyQualifiedName" />
+
+        <!-- actually in poll -->
+        <exclude name="SlevomatCodingStandard.ControlStructures.DisallowTrailingMultiLineTernaryOperator.TrailingMultiLineTernaryOperatorUsed" />
+        <exclude name="SlevomatCodingStandard.Classes.RequireSelfReference.RequiredSelfReference" />
 
         <exclude name="SlevomatCodingStandard.Exceptions.DisallowNonCapturingCatch.DisallowedNonCapturingCatch" />
         <exclude name="SlevomatCodingStandard.Classes.DisallowConstructorPropertyPromotion.DisallowedConstructorPropertyPromotion" />
