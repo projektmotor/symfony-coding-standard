@@ -27,6 +27,7 @@
         <exclude name="SlevomatCodingStandard.Files.FileLength.FileTooLong" />
         <exclude name="SlevomatCodingStandard.Classes.ClassLength.ClassTooLong" />
         <exclude name="SlevomatCodingStandard.Arrays.AlphabeticallySortedByKeys.IncorrectKeyOrder" />
+        <exclude name="SlevomatCodingStandard.Attributes.AttributesOrder" />
         <exclude name="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.ReferenceViaFullyQualifiedName" />
 
         <!-- actually in poll -->
