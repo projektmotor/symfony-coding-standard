@@ -2,6 +2,9 @@
 <ruleset name="ProjektMOTOR">
     <description>The ProjektMOTOR coding standard.</description>
 
+    <exclude-pattern>./tests/object-manager.php</exclude-pattern>
+    <exclude-pattern>./tests/behat-bootstrap.php</exclude-pattern>
+
     <rule ref="PSR1.Methods.CamelCapsMethodName">
         <exclude-pattern>tests/*</exclude-pattern>
     </rule>
