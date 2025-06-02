@@ -23,9 +23,13 @@
 
 
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/ruleset.xml"><!-- relative path to your ruleset.xml -->
+        <!-- sniffs to exclude because of deprecation -->
+        <exclude name="Generic.Functions.CallTimePassByReference" />
+        <exclude name="SlevomatCodingStandard.TypeHints.UnionTypeHintFormat" />
         <!-- keep it for debugging reasons to be able to list all rules vendor/bin/phpcs -e | grep SlevomatCodingStandard -->
         <!--<exclude name="*" />-->
-
+        <exclude name="SlevomatCodingStandard.Functions.RequireSingleLineCall.RequiredSingleLineCall" />
+        <exclude name="SlevomatCodingStandard.Functions.DisallowArrowFunction.DisallowedArrowFunction" />
         <exclude name="SlevomatCodingStandard.Complexity.Cognitive.ComplexityTooHigh" />
         <exclude name="SlevomatCodingStandard.Files.FileLength.FileTooLong" />
         <exclude name="SlevomatCodingStandard.Classes.ClassLength.ClassTooLong" />
@@ -184,7 +188,9 @@
                 <element key="tests" value="App\Tests"/>
                 <element key="tests/features/bootstrap" value="App\Tests\Behat"/>
             </property>
-            <property name="ignoredNamespaces" type="array" value="DoctrineMigrations"/>
+            <property name="ignoredNamespaces" type="array">
+                <element value="DoctrineMigrations"/>
+            </property>
         </properties>
     </rule>
 
